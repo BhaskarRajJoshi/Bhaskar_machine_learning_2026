@@ -42,4 +42,3 @@ print(is_point_inside_rectangle(0, 0, 10, 5, 3, 2) )  # Output: True
 print(is_point_inside_rectangle(0, 0, 10, 5, 10, 5))  # Output: True  (point on the corner)
 print(is_point_inside_rectangle(0, 0, 10, 5, 11, 5) ) # Output: False (outside the rectangle)
 print(is_point_inside_rectangle(-5, -5, 5, 5, 0, 0))  # Output: True  (inside a rectangle with negative coordinates))
-print(is_point_inside_rectangle(-5, -5, 5, 5, -5, -4))
