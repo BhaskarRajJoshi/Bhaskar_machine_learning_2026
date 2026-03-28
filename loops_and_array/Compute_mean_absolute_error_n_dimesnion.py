@@ -33,3 +33,30 @@
 # 👉 In the second example, the function computes absolute differences for each coordinate, sums them, and
 # divides by total number of values (not just points).
 # ---
+
+
+def compute_mae(actual, predicted):
+    sums = 0
+    for i, x in enumerate(actual):
+        sums += abs(x - predicted[i])
+    mae = sums/len(actual)
+
+    return mae
+
+# if 2d array help from chatgpt
+def compute_mae(actual, predicted):
+    sums = 0
+    res = []
+    for i in range(len(actual)):
+        for j in range(len(actual[i])):
+            res.append(abs(actual[i][j] - predicted[i][j]))
+    print(res)
+    for i in range(len(res)):
+        sums += res[i]
+    mae = sums/len(res)
+
+    return mae
+
+# print(compute_mae([3, 5, 2], [2, 5, 4]))
+print(compute_mae([[1, 2], [3, 4], [5, 6]], [[2, 2], [2, 5], [5, 7]]))
+
